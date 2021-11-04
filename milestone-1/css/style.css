@@ -30,7 +30,7 @@
 
 .section-left{
     width: 35%;
-    background-color: red;
+   
     display: flex;
     flex-direction: column;
 }
@@ -41,14 +41,14 @@
     background-color: lightgray;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    
     
 }
 
 .info-user-left img{
     border-radius: 50%;
-    width: 35px;
+    width: 50px;
 
 
 }
@@ -57,6 +57,42 @@
     background-color:#89d1f0 ;
 }
 
+.notifications > a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: #89d1f0 ;
+    margin: 10px;
+    
+    
+}
+.notifications i{
+    font-size: 20px;
+}
+
+
+.info-user-left-icons i {
+    padding-right: 15px;
+    color: grey;
+}
+
+.my-border-left{
+    border-left: solid 1px grey;
+}
+
+.contacts{
+    flex-grow: 1;
+    overflow: auto;
+    background-color: white;
+    width: 97%;
+}
+.single-contact{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: tomato;
+}
 
 
 
@@ -65,5 +101,47 @@
 .section-right{
 
     width: 65%;
-    background-color: royalblue;
+    
+    
+}
+
+.info-user-right{
+    height: 60px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.info-user-right img{
+    border-radius: 50%;
+    width: 50px;
+
+
+}
+
+.info-user-right-icons i {
+    padding-right: 15px;
+    color: grey;
+}
+
+
+
+.container-conversation{
+    overflow: auto;
+    flex-grow: 1;
+    /* background-image: url(/img/mine.jpg); */
+    min-height: 500px;
+    background-color: salmon;
+    
+    width: 99%;
+    /* object-fit: cover; */
+}
+
+
+.my-message-input{
+    height:60px;
+    display: flex;
+    flex-shrink: 0;
 }
