@@ -21,7 +21,7 @@
             <section class="section-left">
                 <!-- DIV INFO USER -->
                 <div class="info-user-left">
-                    <div class="d-flex align-items-end px-2">
+                    <div class="d-flex align-items-center px-2">
                         <img src="../img/avatar_io.jpg" alt="user image">
                         <h5 class="px-2">Nome Utente</h5>  
                     </div>
@@ -54,7 +54,7 @@
                 <!-- DIV SEARCH CONTACTS -->
                 <div class="search-contacts">
                     <div class="input-group bg-light p-1 mb-1">
-                        <button class="btn btn-outline-secondary" type="button">
+                        <button class="btn btn-light" type="button">
                             <i class="fas fa-search"></i>
                             
                         </button>
@@ -66,20 +66,23 @@
                 </div>
                 <!-- DIV CONTACTS -->
                 <div class="contacts">
-                    <div class="single-contact " v-for="friend  in friends">
+                    <div class="single-contact  " v-for="friend  in friends">
                         <div class="d-flex">
-                            <img v-bind:src="friend.avatar" v-bind:alt="friend.avatar">
-                        </div>
-                        <div>
-                            <h6>
-                                {{friend.name}}
-                            </h6>
-                            <span>
-                                {{friend.messages[friend.messages.length -1].text}}
-                            </span>
+                            <div class="avatar-container">
+                                <img v-bind:src="friend.avatar" v-bind:alt="friend.avatar">
+                            </div>
+                            <div class=" pt-1  lh-1 ">
+                                <h6>
+                                    {{friend.name}}
+                                </h6>
+                                <span>
+                                    {{friend.messages[friend.messages.length -1].text}}
+                                </span>
                             
+                            </div>
                         </div>
-                        <div>
+                        
+                        <div class="pt-1">
                             <!-- <p>23/12/2020 16:44:34</p> -->
                             {{friend.messages[friend.messages.length -1].date}}
                         </div> 
@@ -90,16 +93,19 @@
                 </div>
 
             </section>
+                        <!-- INIZIO DELLA SEZIONE DI DESTRA -->
             <section class="section-right">
                 <div class="info-user-right my-border-left ">
                     <div class="d-flex align-items-center px-2">
                         <img src="../img/avatar_1.jpg" alt="user image">
-                        <div class="">
-                            <h5 class="px-2 m-0">Nome Utente</h5>
+                        <div class="pt-3">
+                           <h5 class="px-2 m-0">{{welcome}}</h5>
                             <p class="px-2">
                                 ultimo accesso alle 10/1/2020  16:15:22
                             </p>
+                         
                         </div>
+                        
                           
                        
                     </div>
@@ -112,33 +118,26 @@
                     </div>
                   
                 </div>
-
+                        <!-- CONTAINER DEI MESSAGGI -->
 
                 <div class="container-conversation">
-                  <div>
-
-                  </div>
-                  <div>
-
-                  </div>
-                  <div>
-
-                  </div>
-                  <div>
-
-                  </div>
+                  
 
                 </div>
-
-                <div class="my-message-input">
-                    <div class="d-flex align-items-center py-1">
-                        <div class="  text-center">
+                        <!-- INPUT MESSAGGIO-->
+                <div class="my-message-input py-2 row">
+                    <div class="d-flex align-items-center p-0 ">
+                        <div class="  text-center px-4">
                             <i class="far fa-smile"></i>
                         </div>
 
-                        <input type="text" class="form-control mx-2 px-1" placeholder="Scrivi un messaggio">
+                        
+                        <input type="text" class="form-control form-control-lg  " placeholder="Scrivi un messaggio">
+                        
 
-                        <div class="text-center">
+                        
+
+                        <div class="text-center px-4">
                             <i class="fas fa-microphone"></i>
                         </div>
                     </div>

@@ -5,9 +5,10 @@ Vue.config.devtools = true;
 console.log("ahhahahahahhaha")
 new Vue({
 
-    el: "radice",
+    el: "#radice",
 
     data : {
+        welcome: "welcome",
 
         friends:[
             {
