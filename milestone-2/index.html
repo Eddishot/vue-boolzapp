@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="radice">
+        <header>
+            <div class="green-background"></div>
+                
+        </header>
+        <main class="main-container">
+            <section class="section-left">
+                <!-- DIV INFO USER -->
+                <div class="info-user-left">
+                    <div class="d-flex align-items-center px-2">
+                        <img src="img/avatar_io.jpg" alt="user image">
+                        <h5 class="px-2">Nome Utente</h5>  
+                    </div>
+                  
+                  <div class="d-flex info-user-left-icons">
+                    <a href="#"><i class="fas fa-circle-notch"></i></a>
+                    <a href="#"><i class="fas fa-comment-alt"></i></a>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+
+                  </div>
+                  
+                </div>
+                <!-- DIV NOTIFICATIONS  -->
+                <div class="notifications d-flex">
+                    <a href="#">
+                        <i class="fas fa-bell-slash"></i>
+                    </a>
+                    <div class="notifications-text">
+                        <h6 class="m-0 mt-2" >
+                            Ricevi notifiche di nuovi messaggi
+                        </h6>
+                        <a href="#">
+                            <p class="m-0">
+                                Attiva notifiche desktop
+                            </p>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- DIV SEARCH CONTACTS -->
+                <div class="search-contacts">
+                    <div class="input-group bg-light p-1 mb-1">
+                        <button class="btn btn-light" type="button">
+                            <i class="fas fa-search"></i>
+                            
+                        </button>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" class="form-control">
+
+
+                    </div>
+
+                </div>
+                <!-- DIV CONTACTS -->
+                <div class="contacts">
+                    <div class="single-contact  " @click="appearChatClick(friend)" v-for="friend  in friends">
+                        <div class="d-flex">
+                            <div class="avatar-container">
+                                <!-- <img v-bind:src="friend.avatar" v-bind:alt="friend.avatar"> -->
+                                <img :src="pathFriendAvatar(friend.avatar)" alt="">
+                            </div>
+                            <div class=" pt-1  lh-1 ">
+                                <h6>
+                                    {{friend.name}}
+                                </h6>
+                                <span>
+                                    {{friend.messages[friend.messages.length -1].text}}
+                                </span>
+                            
+                            </div>
+                        </div>
+                        
+                        <div class="pt-1">
+                            <!-- <p>23/12/2020 16:44:34</p> -->
+                            {{friend.messages[friend.messages.length -1].date}}
+                        </div> 
+                               
+                               
+                    </div>
+
+                </div>
+
+            </section>
+                        <!-- INIZIO DELLA SEZIONE DI DESTRA -->
+            <section class="section-right">
+                <div class="info-user-right my-border-left ">
+                    <div class="d-flex align-items-center px-2">
+                        <img src="img/avatar_1.jpg" alt="user image">
+                        <div class="pt-3">
+                           <h5 class="px-2 m-0">Nome Utente</h5>
+                            <p class="px-2">
+                                ultimo accesso alle 10/1/2020  16:15:22
+                            </p>
+                         
+                        </div>
+                        
+                          
+                       
+                    </div>
+                                      
+                    <div class="d-flex info-user-left-icons">
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="fas fa-paperclip"></i></a>
+                        <a href="#"> <i class="fas fa-ellipsis-v"></i></a>
+
+                    </div>
+                  
+                </div>
+                        <!-- CONTAINER DEI MESSAGGI -->
+
+                <div class="container-conversation">
+                    <div v-for="msg in activeChat.messages" class="container-conversation-msg"
+                        :class="msg.status">
+                        <div class="card">
+                            <div class="card-text">
+                                {{msg.text}}
+                            </div>
+
+                        </div>
+                    </div>
+                  
+
+                </div>
+                        <!-- INPUT MESSAGGIO-->
+                <div class="my-message-input py-2 row">
+                    <div class="d-flex align-items-center p-0 ">
+                        <div class="  text-center px-4">
+                            <i class="far fa-smile"></i>
+                        </div>
+
+                        
+                        <input type="text" class="form-control form-control-lg  " placeholder="Scrivi un messaggio">
+                        
+
+                        
+
+                        <div class="text-center px-4">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+
+
+ <script src="js/javascript.js"></script>
+</body>
+</html>
