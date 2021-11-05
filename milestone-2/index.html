@@ -69,8 +69,8 @@
                     <div class="single-contact  " @click="appearChatClick(friend)" v-for="friend  in friends">
                         <div class="d-flex">
                             <div class="avatar-container">
-                                <!-- <img v-bind:src="friend.avatar" v-bind:alt="friend.avatar"> -->
-                                <img :src="pathFriendAvatar(friend.avatar)" alt="">
+                                <img v-bind:src="friend.avatar" v-bind:alt="friend.avatar">
+                                <!-- <img :src="pathFriendAvatar(friend.avatar)" alt=""> -->
                             </div>
                             <div class=" pt-1  lh-1 ">
                                 <h6>

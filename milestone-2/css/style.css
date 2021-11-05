@@ -101,9 +101,15 @@ h6{
 .single-contact{
     display: flex;
     justify-content: space-between;
-    
-    
 }
+.single-contact:hover{
+    background-color: rgba(224, 222, 222, 0.651);
+    cursor: pointer;
+}
+
+
+    
+    
 
 .avatar-container{
     width: 70px;
@@ -166,28 +172,36 @@ h6{
     width: 99%;
     object-fit: cover;
     /* padding: 20px 40px; */
+    display: flex;
+    flex-direction: column;
 }
 
 .container-conversation-msg{
     padding: 10px 20px;
+    max-width: 300px;
+    
     
 }
 
-.container-conversation-msg.sent .card{
-    text-align: left;
-    background-color: #abdb8b;
+.container-conversation-msg.sent{
+    align-self: flex-end;
 }
 
+
 .container-conversation-msg.sent .card{
-    background-color: white;
+    background-color: rgb(38, 197, 65);
+    
 }
 
+.container-conversation-msg.received .card{
+    background-color: rgb(231, 235, 231);
+}
 
 
 .container-conversation-msg .card{
 
     min-width: 150px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
 }
     

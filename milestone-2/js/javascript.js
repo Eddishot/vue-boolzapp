@@ -37,10 +37,24 @@ new Vue({
 
                     },
                     {
+                        date: "10/2/2020 15:19:30",
+                        text:"Ha aperto al centro un nuovo posto deove fanno la cucina Indiana.Proviamo quello ",
+                        status:"received",
+                        color:"white"
+
+                    },
+                    {
                         date: "10/2/2020 15:25:20",
                         text:"Allora prenoto per domani. A domani",
                         status:"sent",
                         color:"green"
+
+                    },
+                    {
+                        date: "10/2/2020 15:26:30",
+                        text:"Perfetto allora senti anche gli altri ",
+                        status:"received",
+                        color:"white"
 
                     },
                 ]
@@ -73,8 +87,15 @@ new Vue({
 
                     },
                     {
+                        date: "29/2/2020 13:35:57",
+                        text:"Serve altro?",
+                        status:"received",
+                        color:"white"
+
+                    },
+                    {
                         date: "29/2/2020 13:45:20",
-                        text:"Grazie mille",
+                        text:"No apposto cosi, grazie mille",
                         status:"sent",
                         color:"green"
 
@@ -108,10 +129,24 @@ new Vue({
 
                     },
                     {
+                        date: "21/2/2020 17:23:50",
+                        text: "che ho portato la macchina dal meccanico",
+                        status:"received",
+                        color:"white"
+
+                    },
+                    {
                         date: "21/2/2020 17:45:20",
                         text:"si andiamo insieme",
                         status:"sent",
                         color:"green"
+
+                    },
+                    {
+                        date: "21/2/2020 17:49:50",
+                        text: "perfetto a dopo allora",
+                        status:"received",
+                        color:"white"
 
                     },
                 ]
@@ -119,35 +154,42 @@ new Vue({
             },
            
             {
-                name:"francesca",
+                name:"Claudia",
                 avatar:"img/avatar_6.jpg",
                 messages:[
                     {
                         date: "25/2/2020 22:02:35",
-                        text:" Ehi Francesca dobbiamo portare a termine il progetto per dopodomani. A che punto sei?",
+                        text:" Ehi claudia hai visto che Andrea si è fatto male al lavoro?",
                         status:"sent",
                         color:"green"
 
                     },
                     {
                         date: "25/2/2020 22:16:40",
-                        text:"Rispondi che devo dirlo anche a Carlo che vuole saperlo",
+                        text:"Rispondi che tra poco parto per andare a trovarlo all'ospedale",
                         status:"sent",
                         color:"green"
 
                     },
                     {
                         date: "25/2/2020 22:26:50",
-                        text: "Ho quasi finito, mi manca solamente l´ultima parte",
+                        text: "Cavoli non lo sapevo.Dobbiamo andarci subito",
                         status:"received",
                         color:"white"
 
                     },
                     {
                         date: "25/2/2020 22:55:20",
-                        text:"Va bene, ci vediamo dopo a cena con gli altri",
+                        text:"Va bene, ci vediamo dopo che ti passo a prendere io",
                         status:"sent",
                         color:"green"
+
+                    },
+                    {
+                        date: "25/2/2020 22:256:50",
+                        text: "Va bene intanto mi vesto allora",
+                        status:"received",
+                        color:"white"
 
                     },
                 ]
@@ -165,9 +207,9 @@ new Vue({
     methods:{
 
 
-        pathFriendAvatar(avatar){
-            return `img/avatar${avatar}.jpg`
-        },
+        // pathFriendAvatar(avatar){
+        //     return `img/avatar${avatar}.jpg`
+        // },
 
         getLastMessage(messages){
 
