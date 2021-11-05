@@ -13,7 +13,7 @@ new Vue({
         friends:[
             {
                 name:"Andrea",
-                avatar:"../img/avatar_5.jpg",
+                avatar:"img/avatar_5.jpg",
                 messages:[
                     {
                         date: "10/2/2020 15:15:15",
@@ -48,7 +48,7 @@ new Vue({
             },
             {
                 name:"Jessica",
-                avatar:"../img/avatar_6.jpg",
+                avatar:"img/avatar_6.jpg",
                 messages:[
                     {
                         date: "29/2/2020 13:15:35",
@@ -84,7 +84,7 @@ new Vue({
             },
             {
                 name:"federico",
-                avatar:"../img/avatar_7.jpg",
+                avatar:"img/avatar_7.jpg",
                 messages:[
                     {
                         date: "21/2/2020 17:08:35",
@@ -117,9 +117,10 @@ new Vue({
                 ]
 
             },
+           
             {
                 name:"francesca",
-                avatar:"../img/avatar_6.jpg",
+                avatar:"img/avatar_6.jpg",
                 messages:[
                     {
                         date: "25/2/2020 22:02:35",
