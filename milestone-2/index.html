@@ -67,7 +67,7 @@
                 </div>
                 <!-- DIV CONTACTS -->
                 <div class="contacts">
-                    <div class="single-contact  " @click="appearChatClick(friend)" v-for="friend  in friends">
+                    <div class="single-contact  " @click="appearChatClick(friend)" v-for="friend  in  getFilteredData()">
                         <div class="d-flex">
                             <div class="avatar-container">
                                 <img v-bind:src="friend.avatar" v-bind:alt="friend.avatar">
