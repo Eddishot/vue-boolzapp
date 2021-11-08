@@ -249,7 +249,7 @@ new Vue({
             this.newMessage = "";
 
 
-            timeOutResponse(()=>{
+            setTimeout(()=>{
 
                 this.addMessage("Ottima Idea", "receveid")
 
@@ -262,7 +262,7 @@ new Vue({
             }
       
             return this.friends.filter((contact) => {
-              // nome dell'utente attuale contiene il testo ricercato
+              
               return contact.name
                 .toLowerCase()
                 .includes(this.filterMessage.toLowerCase().trim());
