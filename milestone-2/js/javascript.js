@@ -200,6 +200,8 @@ new Vue({
         activeChat: {},
 
         newMessage: "",
+
+        filterMessage: "",
         
         
     },
@@ -228,6 +230,43 @@ new Vue({
 
         appearChatClick(chat){
             this.activeChat = chat
-        }
-    }
+        },
+
+
+        addMessage(testoMessaggio, stato){
+            this.activeChat.messages.push({
+                text: testoMessaggio,
+                status: stato,
+            })
+        },
+
+
+        responseClick(){
+
+            this.addMessage(this.newMessage, "sent");
+
+
+            this.newMessage = "";
+
+
+            timeOutResponse(()=>{
+
+                this.addMessage("Ottima Idea", "receveid")
+
+            }, 1000 );
+        },
+
+        getFilteredData() {
+            if (!this.filterMessage) {
+              return this.friends;
+            }
+      
+            return this.friends.filter((contact) => {
+              // nome dell'utente attuale contiene il testo ricercato
+              return contact.name
+                .toLowerCase()
+                .includes(this.filterMessage.toLowerCase().trim());
+            });
+        },
+    },
 })
