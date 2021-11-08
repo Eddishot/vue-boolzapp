@@ -136,13 +136,14 @@
                 </div>
                         <!-- INPUT MESSAGGIO-->
                 <div class="my-message-input py-2 row">
-                    <div class="d-flex align-items-center p-0 ">
+                    <div  class="d-flex align-items-center p-0 ">
                         <div class="  text-center px-4">
                             <i class="far fa-smile"></i>
                         </div>
 
                         
-                        <input type="text" class="form-control form-control-lg  " placeholder="Scrivi un messaggio">
+                        <input type="text" class="form-control form-control-lg  " placeholder="Scrivi un messaggio..."
+                        v-model="newMessage" @keyup.enter=" responseClick">
                         
 
                         
